@@ -14,7 +14,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_spec = importlib.util.spec_from_file_location("evirep_06_agree", os.path.join(ROOT, "scripts", "06_vps_fusion.py"))
+_spec = importlib.util.spec_from_file_location("drugrep_06_agree", os.path.join(ROOT, "scripts", "06_vps_fusion.py"))
 fusion = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(fusion)
 TOL = 1e-12

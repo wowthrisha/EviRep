@@ -64,7 +64,7 @@ def backup(root, dest, full=False, now=None):
         raise ValueError("nothing to back up (no files under data/)")
     os.makedirs(dest, exist_ok=True)
     stamp = (now or datetime.now(timezone.utc)).strftime("%Y%m%dT%H%M%SZ")
-    final = os.path.join(dest, f"evirep_data_{stamp}{'_full' if full else ''}.tar.gz")
+    final = os.path.join(dest, f"drugrep_data_{stamp}{'_full' if full else ''}.tar.gz")
     if os.path.exists(final):
         raise ValueError(f"{final} already exists; refusing to overwrite a backup")
     tmp = final + ".partial"

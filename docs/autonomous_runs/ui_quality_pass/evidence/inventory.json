@@ -2307,7 +2307,7 @@
  },
  "overview": {
   "headings": [
-   "What EviRep does",
+   "What DrugRep does",
    "Primary findings",
    "Top-ranked candidates",
    "Evidence coverage across the 90 candidates",
@@ -2400,7 +2400,7 @@
   "chars": 5050,
   "codes": 12,
   "paths": 12,
-  "text": "What EviRep does EviRep ranks drugs that have already been tested in Parkinson's disease (PD) by how much independent, mechanistic, clinical and safety evidence exists for them, and shows every piece of that evidence with its source. It then checks, retrospectively, whether drugs ranked higher were more often taken into new PD trials after 1 January 2021. Continued clinical investigation in PD (not therapeutic efficacy): a qualifying PD interventional trial first posted on/after 2021-01-01 in the ClinicalTrials.gov snapshot queried 2026-10-05, excluding data/label_role_exclusions.csv (D-010). "
+  "text": "What DrugRep does DrugRep ranks drugs that have already been tested in Parkinson's disease (PD) by how much independent, mechanistic, clinical and safety evidence exists for them, and shows every piece of that evidence with its source. It then checks, retrospectively, whether drugs ranked higher were more often taken into new PD trials after 1 January 2021. Continued clinical investigation in PD (not therapeutic efficacy): a qualifying PD interventional trial first posted on/after 2021-01-01 in the ClinicalTrials.gov snapshot queried 2026-10-05, excluding data/label_role_exclusions.csv (D-010). "
  },
  "technical": {
   "headings": [

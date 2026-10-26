@@ -33,7 +33,7 @@
    "check": "root URL opens the researcher Overview",
    "result": "PASS",
    "detail": {
-    "title": "EviRep \u00b7 Overview",
+    "title": "DrugRep \u00b7 Overview",
     "load_s": 0.62
    }
   },
@@ -42,7 +42,7 @@
    "result": "PASS",
    "detail": {
     "hash": "#overview",
-    "title": "EviRep \u00b7 Overview"
+    "title": "DrugRep \u00b7 Overview"
    }
   },
   {
@@ -50,7 +50,7 @@
    "result": "PASS",
    "detail": {
     "hash": "#drugs",
-    "title": "EviRep \u00b7 Candidates \u00b7 Candidate table"
+    "title": "DrugRep \u00b7 Candidates \u00b7 Candidate table"
    }
   },
   {
@@ -58,7 +58,7 @@
    "result": "PASS",
    "detail": {
     "hash": "#evidence",
-    "title": "EviRep \u00b7 Evidence \u00b7 All evidence"
+    "title": "DrugRep \u00b7 Evidence \u00b7 All evidence"
    }
   },
   {
@@ -66,7 +66,7 @@
    "result": "PASS",
    "detail": {
     "hash": "#validation",
-    "title": "EviRep \u00b7 Validation"
+    "title": "DrugRep \u00b7 Validation"
    }
   },
   {
@@ -74,7 +74,7 @@
    "result": "PASS",
    "detail": {
     "hash": "#run",
-    "title": "EviRep \u00b7 Run Center \u00b7 Pipeline health"
+    "title": "DrugRep \u00b7 Run Center \u00b7 Pipeline health"
    }
   },
   {

@@ -81,7 +81,7 @@ def now():
 
 def load_stages():
     """The stage registry from ui/server.py (loaded under a private name; no server is started)."""
-    spec = importlib.util.spec_from_file_location("_evirep_registry", os.path.join(REPO, "ui", "server.py"))
+    spec = importlib.util.spec_from_file_location("_drugrep_registry", os.path.join(REPO, "ui", "server.py"))
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod.STAGES

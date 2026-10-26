@@ -30,7 +30,7 @@ t0 = time.time(); cmd("Page.navigate", url=URL); ready(); load_s = round(time.ti
 # --- navigation ---------------------------------------------------------------------------------
 nav = js("[...document.querySelectorAll('#nav button')].map(b => [b.dataset.view, b.textContent])")
 rec("primary navigation has exactly five sections in order", [v for v, _ in nav] == ["overview", "drugs", "evidence", "validation", "run"], {"nav": nav})
-rec("root URL opens the researcher Overview", js("document.title") == "EviRep · Overview" and "What you are looking at" in T(), {"title": js("document.title"), "load_s": load_s})
+rec("root URL opens the researcher Overview", js("document.title") == "DrugRep · Overview" and "What you are looking at" in T(), {"title": js("document.title"), "load_s": load_s})
 for view, label in nav:
     js(f"document.querySelector('#nav button[data-view=\"{view}\"]').click()"); ready(); pump(0.3)
     ok = js(f"document.querySelector('#nav button[data-view=\"{view}\"]').getAttribute('aria-current') === 'page'") and js("location.hash") == "#" + view and label in js("document.title")

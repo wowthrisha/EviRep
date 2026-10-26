@@ -16,7 +16,7 @@ import tempfile
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_spec = importlib.util.spec_from_file_location("evirep_ui_faults", os.path.join(ROOT, "ui", "server.py"))
+_spec = importlib.util.spec_from_file_location("drugrep_ui_faults", os.path.join(ROOT, "ui", "server.py"))
 ui = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(ui)
 HAVE = os.path.exists(os.path.join(ROOT, "data", "run_manifest.json")) and os.path.exists(os.path.join(ROOT, "data", "vps_scores_v2.csv"))
@@ -38,7 +38,7 @@ def _md5(p):
 class TestCorruptedInputNeverLooksFresh(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.mkdtemp(prefix="evirep_faults_")
+        cls.tmp = tempfile.mkdtemp(prefix="drugrep_faults_")
         shutil.copytree(os.path.join(ROOT, "data"), os.path.join(cls.tmp, "data"),
                         ignore=lambda d, names: [n for n in names if n in SKIP])
         os.makedirs(os.path.join(cls.tmp, "data", "_runs"))
@@ -120,7 +120,7 @@ class TestCorruptedInputNeverLooksFresh(unittest.TestCase):
 @unittest.skipUnless(HAVE, "needs the approved artefacts")
 class TestUnfingerprintedInputIsNotCurrent(unittest.TestCase):
     def test_untracked_input_is_reported_and_blocks_the_current_state(self):
-        tmp = tempfile.mkdtemp(prefix="evirep_untracked_")
+        tmp = tempfile.mkdtemp(prefix="drugrep_untracked_")
         try:
             shutil.copytree(os.path.join(ROOT, "data"), os.path.join(tmp, "data"),
                             ignore=lambda d, names: [n for n in names if n in SKIP or n == "cache"])
@@ -153,7 +153,7 @@ class TestAgentDefectsFixed(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.mkdtemp(prefix="evirep_defects_")
+        cls.tmp = tempfile.mkdtemp(prefix="drugrep_defects_")
         shutil.copytree(os.path.join(ROOT, "data"), os.path.join(cls.tmp, "data"),
                         ignore=lambda d, names: [n for n in names if n in SKIP])
 

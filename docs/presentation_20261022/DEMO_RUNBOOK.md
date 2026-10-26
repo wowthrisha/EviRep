@@ -1,4 +1,4 @@
-# EviRep demo runbook (tested 2026-10-22)
+# DrugRep demo runbook (tested 2026-10-22)
 
 Every step below was rehearsed in real Chrome by `records/browser/drive22.py`: **22/22 checks passed** (`records/browser/drive22.out`). Screenshots are in `screenshots/`. Timings are for a 3-minute talk; the 10h run takes about 1 second.
 

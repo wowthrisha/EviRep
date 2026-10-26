@@ -1,4 +1,4 @@
-# EviRep final submission-readiness report (2026-10-20)
+# DrugRep final submission-readiness report (2026-10-20)
 
 **Window:** 08:40:46Z → about 09:16Z, roughly 35 minutes of active work.
 

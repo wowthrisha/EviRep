@@ -68,7 +68,7 @@ rec("5c. launched from an agent page; the Dashboard shows the real run RUNNING (
     bool(running) and "%" not in act, {"activity": act[:160], "paused": stopped})
 dis = js("[...document.querySelectorAll('button[data-run],button[data-pipeline]')].every(b => b.disabled)")
 code = js("""(async () => { const s = await (await fetch('/api/session')).json();
-  const r = await fetch('/api/run', {method:'POST', headers:{'Content-Type':'application/json','X-EviRep-Nonce':s.session_nonce}, body: JSON.stringify({pipeline:true})});
+  const r = await fetch('/api/run', {method:'POST', headers:{'Content-Type':'application/json','X-DrugRep-Nonce':s.session_nonce}, body: JSON.stringify({pipeline:true})});
   return r.status })()""")
 rec("concurrency: while running, Run controls are disabled and a second launch is refused (409)", dis and code == 409, {"status": code})
 # 8: server restart while the stage runs

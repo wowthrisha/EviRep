@@ -44,7 +44,7 @@ Evidence paths are relative to the repository.
 | Accessibility | Semantics, keyboard, focus, text status | PASS (automated subset) | `lang`, `main`, `nav`, scoped `th`, labelled inputs, `img alt`, visible focus, status words not colour alone. No screen-reader or contrast audit tool was run |
 | UI correctness | Live state, no JS errors, mobile | PASS | browser 20/20 (`docs/autonomous_runs/evidence/ui_browser_checks_e2e_audit.json`) |
 
-**Verdict: DEVELOPMENT READY.** EviRep is usable locally by its owner, on loopback, as a read-only research dashboard with a tracked pipeline.
+**Verdict: DEVELOPMENT READY.** DrugRep is usable locally by its owner, on loopback, as a read-only research dashboard with a tracked pipeline.
 
 It is **not** pilot, staging or production ready. The engineering blockers are:
 - authentication and HTTPS;

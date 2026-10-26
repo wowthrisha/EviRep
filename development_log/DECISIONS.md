@@ -1,4 +1,4 @@
-# EviRep — Decision Log
+# DrugRep — Decision Log
 
 One entry per material decision. **V** = verified fact (file, test or response observed in
 this repository), **I** = reasoned inference, **H** = unverified hypothesis. A recorded

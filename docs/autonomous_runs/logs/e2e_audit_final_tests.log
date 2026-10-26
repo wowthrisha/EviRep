@@ -180,16 +180,28 @@ Targets: ['Gene::1']
 05h: {'PRE_CUTOFF_VERSION_SCORED': 1, 'NO_PRE_CUTOFF_VERSION': 1, 'NO_CURRENT_LABEL': 1}; parser check {'agree': 2, 'checked': 2}; failures 0
 05h: {'PRE_CUTOFF_VERSION_SCORED': 1, 'NO_PRE_CUTOFF_VERSION': 1, 'NO_CURRENT_LABEL': 1}; parser check {'agree': 2, 'checked': 2}; failures 0
 05h: {'PRE_CUTOFF_VERSION_SCORED': 1, 'NO_PRE_CUTOFF_VERSION': 1, 'NO_CURRENT_LABEL': 1, 'RETRIEVAL_FAILED': 1}; parser check {'agree': 2, 'checked': 2}; failures 1
-  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 2314.31it/s]
-.........  0%|          | 0/5 [00:00<?, ?it/s]100%|██████████| 5/5 [00:00<00:00, 18315.74it/s]
-.  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 13684.52it/s]
-.  0%|          | 0/200 [00:00<?, ?it/s]  4%|▍         | 9/200 [00:00<00:00, 33376.42it/s]
-.  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 129720.74it/s]
-..  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 136770.78it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 2314.31it/s]
+.........
+  0%|          | 0/5 [00:00<?, ?it/s]
+100%|██████████| 5/5 [00:00<00:00, 18315.74it/s]
+.
+  0%|          | 0/2 [00:00<?, ?it/s]
+100%|██████████| 2/2 [00:00<00:00, 13684.52it/s]
+.
+  0%|          | 0/200 [00:00<?, ?it/s]
+  4%|▍         | 9/200 [00:00<00:00, 33376.42it/s]
+.
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 129720.74it/s]
+..
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 136770.78it/s]
 ......................................................./Users/thrisha/Drup_Rep_PF/EviRep/tests/test_ui.py:959: ResourceWarning: unclosed file <_io.TextIOWrapper name='/Users/thrisha/Drup_Rep_PF/EviRep/ui/style.css' mode='r' encoding='UTF-8'>
   css = open(os.path.join(ROOT, "ui", "style.css")).read()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
-......[evirep-ui] run status unavailable: JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+......[drugrep-ui] run status unavailable: JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
 ./Users/thrisha/Drup_Rep_PF/EviRep/tests/test_ui.py:226: ResourceWarning: unclosed file <_io.TextIOWrapper name='/Users/thrisha/Drup_Rep_PF/EviRep/ui/app.js' mode='r' encoding='UTF-8'>
   js = open(os.path.join(ROOT, "ui", "app.js")).read()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback

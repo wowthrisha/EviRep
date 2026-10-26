@@ -1,4 +1,4 @@
-# EviRep leakage / data-flow audit (read-only, 2026-10-20)
+# DrugRep leakage / data-flow audit (read-only, 2026-10-20)
 
 Scope: Parkinson's repurposing, cutoff 2021-01-01. Outcome = an accepted PD interventional trial first posted on or after 2021-01-01. Predictors should use only information available before the cutoff.
 Method: static reading of the code and docs, plus offline pandas reads of persisted `data/` artefacts. No repository file was changed, no stage was run and no network request was made.

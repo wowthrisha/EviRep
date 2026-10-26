@@ -20,7 +20,7 @@ Every older address still works and opens inside its new section:
 - `#compare/…`;
 - `#technical`, `#pipeline`, `#agents`, `#cases` and `#agent/…`.
 
-Browser title pattern: `EviRep · Section · Page`.
+Browser title pattern: `DrugRep · Section · Page`.
 
 ## Page by page
 

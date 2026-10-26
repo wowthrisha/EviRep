@@ -1,4 +1,4 @@
-# EviRep: final submission and release report (2026-10-21/22)
+# DrugRep: final submission and release report (2026-10-21/22)
 
 ## Recommendation
 

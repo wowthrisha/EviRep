@@ -59,7 +59,7 @@ seen = wait_until(lambda: "RUNNING" in row("10g") and "running " in row("10g"), 
 rec("a real stage (paused mid-run) is shown RUNNING with elapsed time and activity, no percentage", bool(seen) and "%" not in row("10g"), {"row": row("10g")[:200], "paused_pids": stopped})
 dis = js("[...document.querySelectorAll('button[data-run],button[data-pipeline]')].every(b => b.disabled)")
 code = js("""(async () => { const s = await (await fetch('/api/session')).json();
-  const r = await fetch('/api/run', {method:'POST', headers:{'Content-Type':'application/json','X-EviRep-Nonce':s.session_nonce}, body: JSON.stringify({stage:'10h'})});
+  const r = await fetch('/api/run', {method:'POST', headers:{'Content-Type':'application/json','X-DrugRep-Nonce':s.session_nonce}, body: JSON.stringify({stage:'10h'})});
   return r.status })()""")
 rec("during a run: controls disabled and a second launch is refused (409)", dis and code == 409, {"disabled": dis, "status": code})
 subprocess.run(["pkill", "-f", "ui/server.py --root " + C])

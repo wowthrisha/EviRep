@@ -1,4 +1,4 @@
-/* EviRep read-only dashboard. Served same-origin; no external fonts or assets. */
+/* DrugRep read-only dashboard. Served same-origin; no external fonts or assets. */
 :root {
   /* Single restrained dark palette (2026-10-15, D-014). Tokens are the former dark scheme,
      already checked to WCAG AA by tests/test_ui.py::TestAccessibleContrast. */

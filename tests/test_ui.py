@@ -24,7 +24,7 @@ import urllib.request
 from unittest import mock
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_spec = importlib.util.spec_from_file_location("evirep_ui", os.path.join(ROOT, "ui", "server.py"))
+_spec = importlib.util.spec_from_file_location("drugrep_ui", os.path.join(ROOT, "ui", "server.py"))
 ui = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(ui)
 
@@ -116,7 +116,7 @@ class _NoNetwork:
 
 class UITestBase(unittest.TestCase):
     def setUp(self):
-        self.root = tempfile.mkdtemp(prefix="evirep_ui_")
+        self.root = tempfile.mkdtemp(prefix="drugrep_ui_")
 
     def tearDown(self):
         shutil.rmtree(self.root, ignore_errors=True)

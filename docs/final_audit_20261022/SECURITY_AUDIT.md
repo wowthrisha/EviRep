@@ -37,7 +37,7 @@
 | ID | Severity | Finding | Status |
 |---|---|---|---|
 | SEC-1 | HIGH (pipeline network clients only) | `certifi 2026.7.22` has critical advisories (GHSA-6q48-6c7w-9gw2, PYSEC-2026-4320); fixed in 2026.10.19 | **RECOMMENDED — ADOPTION PENDING**: `./venv/bin/pip install 'certifi>=2026.10.19'`, then re-run tests. Not applied, because the venv is shared with the live presentation server. |
-| SEC-2 | MEDIUM in this use | `pillow 12.3.0` (via matplotlib) has 28 advisories; fixed in 13.0.0 (major version). EviRep only *writes* its own PNGs and never parses untrusted images. | **RECOMMENDED — ADOPTION PENDING**: upgrade, then re-run stage 07 and the tests (compatibility unverified) |
+| SEC-2 | MEDIUM in this use | `pillow 12.3.0` (via matplotlib) has 28 advisories; fixed in 13.0.0 (major version). DrugRep only *writes* its own PNGs and never parses untrusted images. | **RECOMMENDED — ADOPTION PENDING**: upgrade, then re-run stage 07 and the tests (compatibility unverified) |
 | SEC-3 | LOW | `ThreadingHTTPServer` spawns unbounded threads; a local process could exhaust them | **ACCEPTED LIMITATION** (loopback, single user) |
 | SEC-4 | INFO | `scripts/test_openfda.py` made a network call on import | **RESOLVED — IMPLEMENTED AND VERIFIED** (guarded; TD-012) |
 

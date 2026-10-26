@@ -28,8 +28,8 @@ def tree_hash(root):
 
 class TestBackup(unittest.TestCase):
     def setUp(self):
-        self.root = tempfile.mkdtemp(prefix="evirep_bk_root_")
-        self.dest = tempfile.mkdtemp(prefix="evirep_bk_dest_")
+        self.root = tempfile.mkdtemp(prefix="drugrep_bk_root_")
+        self.dest = tempfile.mkdtemp(prefix="drugrep_bk_dest_")
         for rel, body in (("data/vps_scores_v2.csv", "a,b\n1,2\n"), ("data/run_manifest.json", "{}"),
                           ("data/_runs/r1/log.txt", "log\n"), ("data/cache/pubmed_lit/x.json", "{}"),
                           ("data/cache/opentargets_20.11/big.jsonl", "x" * 1000), ("data/.run_manifest.lock", "")):

@@ -1,5 +1,5 @@
 """
-Intervention matching for ClinicalTrials.gov evidence (EviRep).
+Intervention matching for ClinicalTrials.gov evidence (DrugRep).
 
 PROBLEM THIS SOLVES
 -------------------

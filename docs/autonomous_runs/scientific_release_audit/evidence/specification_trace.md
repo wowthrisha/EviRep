@@ -1,4 +1,4 @@
-# EviRep VPS: scientific specification as found in code, docs and data (read-only audit, 2026-10-20)
+# DrugRep VPS: scientific specification as found in code, docs and data (read-only audit, 2026-10-20)
 
 Scope: `/Users/thrisha/Drup_Rep_PF/EviRep`. No repository files were changed. Data facts come from read-only
 pandas/csv reads of `data/` (no pipeline stage was run, no network). The citation `file:N` means a line in the

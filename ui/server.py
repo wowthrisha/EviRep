@@ -1,5 +1,5 @@
 """
-EviRep read-only dashboard.
+DrugRep read-only dashboard.
 
 A minimal local UI over the artefacts the pipeline has already persisted in
 `data/` and the canonical docs. It exists so the pipeline, its agents/APIs and
@@ -845,7 +845,7 @@ from agent_contract import input_changed as _contract_changed  # noqa: E402
 from agent_contract import validate_envelope as _contract_validate  # noqa: E402
 import run_stage as _runs  # noqa: E402  (status() reads the manifest and file fingerprints; it never runs anything)
 import importlib.util as _ilu  # noqa: E402
-_lr_spec = _ilu.spec_from_file_location("evirep_live_runs", os.path.join(UI_DIR, "live_runs.py"))
+_lr_spec = _ilu.spec_from_file_location("drugrep_live_runs", os.path.join(UI_DIR, "live_runs.py"))
 live_runs = _ilu.module_from_spec(_lr_spec)
 _lr_spec.loader.exec_module(live_runs)   # Live Pipeline launches: only POST /api/run uses it, always via run_stage.py
 MAX_RUN_BODY = 1024
@@ -963,7 +963,7 @@ def build_agents(root):
     try:
         st_all = _runs.status(root, STAGES)
     except Exception as exc:       # the manifest is unreadable: say so rather than guess a status
-        print(f"[evirep-ui] run status unavailable: {type(exc).__name__}: {exc}", file=sys.stderr)
+        print(f"[drugrep-ui] run status unavailable: {type(exc).__name__}: {exc}", file=sys.stderr)
         st_all = {}
     try:
         with open(_abs(root, "scripts/06_vps_fusion.py"), encoding="utf-8") as fh:
@@ -2322,7 +2322,7 @@ def make_handler(root):
     nonce = live_runs.new_nonce()        # a cross-site page cannot read it (no CORS), so it cannot POST /api/run
 
     class Handler(BaseHTTPRequestHandler):
-        server_version = "EviRepUI"
+        server_version = "DrugRepUI"
         sys_version = ""                          # don't advertise the Python version
 
         def log_message(self, fmt, *args):  # quiet by default
@@ -2436,7 +2436,7 @@ def make_handler(root):
                 return self._json({"error": "not found"}, 404)
             except Exception as exc:  # never crash the server on a bad artefact
                 # Details go to the local console only; the browser gets the class name.
-                print(f"[evirep-ui] {self.path[:200]!r}: {type(exc).__name__}: {exc}", file=sys.stderr)
+                print(f"[drugrep-ui] {self.path[:200]!r}: {type(exc).__name__}: {exc}", file=sys.stderr)
                 return self._json({"error": f"internal error ({type(exc).__name__}); see the server console"}, 500)
 
         def do_HEAD(self):
@@ -2454,7 +2454,7 @@ def make_handler(root):
             port = self.server.server_address[1]
             if self.headers.get("Origin") not in (f"http://127.0.0.1:{port}", f"http://localhost:{port}"):
                 return self._json({"error": "cross-origin or missing Origin: refused"}, 403)
-            if not secrets.compare_digest(self.headers.get("X-EviRep-Nonce") or "", nonce):
+            if not secrets.compare_digest(self.headers.get("X-DrugRep-Nonce") or "", nonce):
                 return self._json({"error": "missing or stale session nonce: reload the page"}, 403)
             if not (self.headers.get("Content-Type") or "").startswith("application/json"):
                 return self._json({"error": "Content-Type must be application/json"}, 415)
@@ -2472,16 +2472,16 @@ def make_handler(root):
             except live_runs.LaunchError as exc:
                 return self._json({"error": str(exc)}, exc.code)
             except Exception as exc:  # never crash the server; details stay in the local console
-                print(f"[evirep-ui] launch failed: {type(exc).__name__}: {exc}", file=sys.stderr)
+                print(f"[drugrep-ui] launch failed: {type(exc).__name__}: {exc}", file=sys.stderr)
                 return self._json({"error": f"launch failed ({type(exc).__name__}); see the server console"}, 500)
-            print(f"[evirep-ui] launch {rec['launch_id']}: {rec['command']}", file=sys.stderr)
+            print(f"[drugrep-ui] launch {rec['launch_id']}: {rec['command']}", file=sys.stderr)
             return self._json(rec, 202)
 
     return Handler
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="EviRep read-only dashboard")
+    parser = argparse.ArgumentParser(description="DrugRep read-only dashboard")
     parser.add_argument("--host", default="127.0.0.1",
                         help="loopback address to bind (127.0.0.1 or localhost); anything else is refused")
     parser.add_argument("--port", type=int, default=8765)
@@ -2491,7 +2491,7 @@ def main(argv=None):
         parser.error(f"refusing to bind {args.host!r}: the dashboard has no authentication and is "
                      "loopback-only (use 127.0.0.1 or localhost)")
     server = ThreadingHTTPServer((args.host, args.port), make_handler(os.path.abspath(args.root)))
-    print(f"EviRep UI (read-only views; run controls for allow-listed stages) serving {os.path.abspath(args.root)} at http://{args.host}:{args.port}/")
+    print(f"DrugRep UI (read-only views; run controls for allow-listed stages) serving {os.path.abspath(args.root)} at http://{args.host}:{args.port}/")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

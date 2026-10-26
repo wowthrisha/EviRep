@@ -1,4 +1,4 @@
-# Executive summary: EviRep end-to-end UI verification and commit-readiness gate (2026-10-21)
+# Executive summary: DrugRep end-to-end UI verification and commit-readiness gate (2026-10-21)
 
 ## What was verified, by execution
 - **UI controls:** 16 routes and 186 controls were operated one by one in real Chrome, with 0 dead controls and 0 JS exceptions.

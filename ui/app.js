@@ -1,5 +1,5 @@
 "use strict";
-// EviRep read-only dashboard. Every value from the server is rendered through
+// DrugRep read-only dashboard. Every value from the server is rendered through
 // esc() (or md(), which escapes before formatting); nothing is inserted raw.
 const $main = document.getElementById("main");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -356,7 +356,7 @@ async function viewOverview() {
   const stateOk = ov.state === "CURRENT" ? true : ["FAILED", "UNKNOWN"].includes(ov.state) ? false : null;
   const top = rows.filter(r => r.VPS_equal_5d != null).slice(0, 10);
   return `<section class="panel intro"><h2>What you are looking at</h2>
-      <p>EviRep ranks the <strong>${fmt(C.compounds)} drugs that had already been tested in Parkinson's disease before 2021</strong> by how much independent clinical, literature, safety, molecular and network evidence exists for them. It then checks, retrospectively, whether higher-ranked drugs were more often taken into new Parkinson's trials after 2020.</p>
+      <p>DrugRep ranks the <strong>${fmt(C.compounds)} drugs that had already been tested in Parkinson's disease before 2021</strong> by how much independent clinical, literature, safety, molecular and network evidence exists for them. It then checks, retrospectively, whether higher-ranked drugs were more often taken into new Parkinson's trials after 2020.</p>
       <p class="small"><strong>A high rank is a signal for further research, not evidence that a drug works or is safe.</strong> The score is a rank, not a probability.</p>
       <div class="small muted">Approved result set: 5-dimension equal-weight score${approvedOn ? `, recorded ${esc(approvedOn)}` : ""} · independent recomputation ${SC.independent_recomputation === true ? "matches" : SC.independent_recomputation === false ? '<span class="bad">does not match</span>' : "not recorded"}.</div></section>
     <div class="kpis">
@@ -1479,7 +1479,7 @@ async function livePost(body) {
       const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), API_TIMEOUT_MS);
       try {
         r = await fetch("/api/run", {method: "POST", cache: "no-store", credentials: "same-origin", signal: ctl.signal,
-          headers: {"Content-Type": "application/json", "X-EviRep-Nonce": sess.session_nonce}, body: JSON.stringify(body)});
+          headers: {"Content-Type": "application/json", "X-DrugRep-Nonce": sess.session_nonce}, body: JSON.stringify(body)});
         try { data = await r.json(); } catch (e) { data = {}; }
       } catch (e) {
         liveFeedback = {level: "bad", text: "Launch request failed: " + (e.name === "AbortError" ? "timed out" : "server unreachable") + ". Nothing was confirmed as started."};
@@ -1619,7 +1619,7 @@ async function route(opts) {
   $main.dataset.version = liveVersion || "";
   firstRoute = false;
   const sec = SECTIONS[navView], tab = sec && sec.tabs.find(([v]) => v === (TAB_OF[view] || view));
-  document.title = "EviRep · " + (sec ? sec.label + (tab && sec.tabs.length > 1 ? " · " + tab[1] : "") : "Research application");
+  document.title = "DrugRep · " + (sec ? sec.label + (tab && sec.tabs.length > 1 ? " · " + tab[1] : "") : "Research application");
 }
 document.getElementById("nav").addEventListener("click", e => {
   const b = e.target.closest("button"); if (b) location.hash = b.dataset.view;

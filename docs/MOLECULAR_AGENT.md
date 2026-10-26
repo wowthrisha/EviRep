@@ -1,6 +1,6 @@
 # Molecular / Pathway Evidence Agent
 
-EviRep evidence dimension 5. Builds a traceable molecular evidence chain and converts it
+DrugRep evidence dimension 5. Builds a traceable molecular evidence chain and converts it
 into an explainable score.
 
 ```
@@ -69,7 +69,7 @@ datatypes must not be used by this project:
 
 | Datatype | Datasource | Why excluded |
 |---|---|---|
-| `clinical` | `clinical_precedence` | Encodes that a drug hitting this target is already in clinical trials for PD. That is **effectively the EviRep ground-truth label**, and duplicates the clinical-maturity dimension. |
+| `clinical` | `clinical_precedence` | Encodes that a drug hitting this target is already in clinical trials for PD. That is **effectively the DrugRep ground-truth label**, and duplicates the clinical-maturity dimension. |
 | `literature` | `europepmc` | Gene–disease co-mention counting. Duplicates the literature-independence dimension and is not cutoff-bounded. |
 
 **The composite `score` field is never used.** The allowed datatype scores are
@@ -128,7 +128,7 @@ than one that merely shares a Reactome pathway with a PD gene. The 60/40 split e
 **only that ordering**.
 
 > These weights were chosen **a priori**. No label-based search was run to select them.
-> Tuning them against the EviRep ground truth would be label leakage. They are
+> Tuning them against the DrugRep ground truth would be label leakage. They are
 > configurable (`--weight-direct`, `--weight-pathway`) specifically so sensitivity can be
 > tested as an explicit, reported experiment.
 

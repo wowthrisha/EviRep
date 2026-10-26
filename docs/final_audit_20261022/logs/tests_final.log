@@ -1,8 +1,8 @@
 ................................................................................................................................................................................................................................................................FAILED: no compound retrieved ([{'compound_name': 'Alpha', 'error': 'esearch.fcgi: HTTP 500 after 4 attempt(s)'}, {'compound_name': 'Beta', 'error': 'esearch.fcgi: HTTP 500 after 4 attempt(s)'}, {'compound_name': 'Gamma', 'error': 'esearch.fcgi: HTTP 500 after 4 attempt(s)'}]); nothing written
-...............[evirep-ui] launch 20261022T160752Z-ui-3f92a7: scripts/run_stage.py 10h
-.[evirep-ui] launch 20261022T160755Z-ui-e0de6d: scripts/run_stage.py 10h
-......[evirep-ui] launch 20261022T160757Z-ui-4f51a4: scripts/run_stage.py 10h
-.....[evirep-ui] launch 20261022T160801Z-ui-1a0e76: scripts/run_stage.py 10h
+...............[drugrep-ui] launch 20261022T160752Z-ui-3f92a7: scripts/run_stage.py 10h
+.[drugrep-ui] launch 20261022T160755Z-ui-e0de6d: scripts/run_stage.py 10h
+......[drugrep-ui] launch 20261022T160757Z-ui-4f51a4: scripts/run_stage.py 10h
+.....[drugrep-ui] launch 20261022T160801Z-ui-1a0e76: scripts/run_stage.py 10h
 ...................................................................................................................................stage A not started: conflicting run(s) in progress: A (live-A, pid 51972)
 .......data/run_manifest.json unreadable (JSONDecodeError); nothing was run or written. Diagnose with --check-manifest; restore the file from a recovery snapshot or data/_runs history (it is never overwritten automatically).
 ..............................................................................alt1: approved 5D 1.0000, candidate 5D 1.0000, 4D 1.0000
@@ -96,13 +96,25 @@ Saved data/reproducibility.json: 0 findings {}; 0 paper structure(s); None trial
 05h: {'PRE_CUTOFF_VERSION_SCORED': 1, 'NO_PRE_CUTOFF_VERSION': 1, 'NO_CURRENT_LABEL': 1}; parser check {'agree': 2, 'checked': 2}; failures 0
 05h: {'PRE_CUTOFF_VERSION_SCORED': 1, 'NO_PRE_CUTOFF_VERSION': 1, 'NO_CURRENT_LABEL': 1}; parser check {'agree': 2, 'checked': 2}; failures 0
 05h: {'PRE_CUTOFF_VERSION_SCORED': 1, 'NO_PRE_CUTOFF_VERSION': 1, 'NO_CURRENT_LABEL': 1, 'RETRIEVAL_FAILED': 1}; parser check {'agree': 2, 'checked': 2}; failures 1
-  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 2851.97it/s]
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 2851.97it/s]
 ...................................  SEARCH FAILED for X: HTTP 500
-  0%|          | 0/5 [00:00<?, ?it/s]100%|██████████| 5/5 [00:00<00:00, 20661.60it/s]
-.  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 16288.56it/s]
-.  0%|          | 0/200 [00:00<?, ?it/s]  4%|▍         | 9/200 [00:00<00:00, 31801.80it/s]
-.  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 157286.40it/s]
-..  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 149796.57it/s]
+
+  0%|          | 0/5 [00:00<?, ?it/s]
+100%|██████████| 5/5 [00:00<00:00, 20661.60it/s]
+.
+  0%|          | 0/2 [00:00<?, ?it/s]
+100%|██████████| 2/2 [00:00<00:00, 16288.56it/s]
+.
+  0%|          | 0/200 [00:00<?, ?it/s]
+  4%|▍         | 9/200 [00:00<00:00, 31801.80it/s]
+.
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 157286.40it/s]
+..
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 149796.57it/s]
 ........................................................................................................................................................................................................................................
 ----------------------------------------------------------------------
 Ran 771 tests in 86.165s

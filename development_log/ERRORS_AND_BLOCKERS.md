@@ -92,7 +92,7 @@ Severity: **BLOCKER** (stops work) · **ISSUE** (real defect, worked around) ·
   `test_module_datatypes_cannot_include_leaky_types`.
 
 ### B-001 · BLOCKER (documented, not resolvable here) · Open Targets snapshot is not cutoff-bounded
-- **Issue:** EviRep's methodology separates evidence at `CUTOFF_DATE = 2021-01-01`
+- **Issue:** DrugRep's methodology separates evidence at `CUTOFF_DATE = 2021-01-01`
   (`scripts/03_clinicaltrials_groundtruth.py`), using post-cutoff trials **only** as ground
   truth. The Open Targets Platform API serves a single *current* snapshot
   (data version 26.09); it exposes no as-of-date parameter. Evidence published after

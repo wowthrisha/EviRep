@@ -1,4 +1,4 @@
-# EviRep end-to-end audit and production readiness report (2026-10-20)
+# DrugRep end-to-end audit and production readiness report (2026-10-20)
 
 **Mission window:** 2026-10-20T07:18:36Z to about 07:40Z, roughly 25 minutes of continuous work. It did not run overnight.
 
@@ -10,7 +10,7 @@
 Earlier reports are preserved unchanged: OVERNIGHT_FINAL_REPORT.md, FINAL_REPORT.md, CHECKPOINT.md (appended only).
 
 ## A. Executive summary
-**Overall: DEVELOPMENT READY.** EviRep is reliable for local, single-user, read-only use. It is not ready for pilot, staging or production; see K.
+**Overall: DEVELOPMENT READY.** DrugRep is reliable for local, single-user, read-only use. It is not ready for pilot, staging or production; see K.
 
 **Work completed:**
 - **4 defects found and fixed, with regression tests.**
@@ -223,7 +223,7 @@ No agent-derived numeric dimension is defensible (contract grounds; not tested o
 | Documentation | Good: contracts, decisions, architecture, debt, changes, reports |
 
 ## K. Final recommendation: **DEVELOPMENT READY**
-EviRep is suitable for local use by its owner as a read-only research dashboard over a tracked, reproducible pipeline. It is not pilot ready:
+DrugRep is suitable for local use by its owner as a read-only research dashboard over a tracked, reproducible pipeline. It is not pilot ready:
 - the score's headline performance awaits a scientific decision;
 - 28 clinical links are unadjudicated;
 - there is no authentication or HTTPS for any other user.

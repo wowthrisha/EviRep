@@ -1,4 +1,4 @@
-# EviRep dependencies.
+# DrugRep dependencies.
 #
 # The repository previously carried no dependency metadata; these are the
 # direct imports found across scripts/ plus the versions actually installed and

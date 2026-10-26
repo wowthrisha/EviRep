@@ -8,7 +8,7 @@
   "headings": 7,
   "charts": 2,
   "overflow": -15,
-  "title": "EviRep \u00b7 Overview",
+  "title": "DrugRep \u00b7 Overview",
   "render_s": 0.27,
   "screenshot": "after_desktop_overview.png"
  },
@@ -21,7 +21,7 @@
   "headings": 2,
   "charts": 1,
   "overflow": -15,
-  "title": "EviRep \u00b7 Candidates \u00b7 Candidate table",
+  "title": "DrugRep \u00b7 Candidates \u00b7 Candidate table",
   "render_s": 0.26,
   "screenshot": "after_desktop_drugs.png"
  },
@@ -34,7 +34,7 @@
   "headings": 1,
   "charts": 0,
   "overflow": -15,
-  "title": "EviRep \u00b7 Evidence \u00b7 All evidence",
+  "title": "DrugRep \u00b7 Evidence \u00b7 All evidence",
   "render_s": 0.26,
   "screenshot": "after_desktop_evidence.png"
  },
@@ -47,7 +47,7 @@
   "headings": 27,
   "charts": 7,
   "overflow": -15,
-  "title": "EviRep \u00b7 Validation",
+  "title": "DrugRep \u00b7 Validation",
   "render_s": 0.26,
   "screenshot": "after_desktop_validation.png"
  },
@@ -60,7 +60,7 @@
   "headings": 9,
   "charts": 4,
   "overflow": -15,
-  "title": "EviRep \u00b7 Run Center \u00b7 Pipeline health",
+  "title": "DrugRep \u00b7 Run Center \u00b7 Pipeline health",
   "render_s": 0.26,
   "screenshot": "after_desktop_run.png"
  },
@@ -73,7 +73,7 @@
   "headings": 35,
   "charts": 2,
   "overflow": -15,
-  "title": "EviRep \u00b7 Candidates \u00b7 Candidate table",
+  "title": "DrugRep \u00b7 Candidates \u00b7 Candidate table",
   "render_s": 0.51,
   "screenshot": "after_desktop_drugs_Donepezil.png"
  },
@@ -86,7 +86,7 @@
   "headings": 2,
   "charts": 1,
   "overflow": -15,
-  "title": "EviRep \u00b7 Candidates \u00b7 Compare",
+  "title": "DrugRep \u00b7 Candidates \u00b7 Compare",
   "render_s": 0.52,
   "screenshot": "after_desktop_compare.png"
  },
@@ -99,7 +99,7 @@
   "headings": 5,
   "charts": 1,
   "overflow": -15,
-  "title": "EviRep \u00b7 Evidence \u00b7 Mechanism",
+  "title": "DrugRep \u00b7 Evidence \u00b7 Mechanism",
   "render_s": 0.26,
   "screenshot": "after_desktop_mechanism.png"
  },
@@ -112,7 +112,7 @@
   "headings": 49,
   "charts": 0,
   "overflow": -15,
-  "title": "EviRep \u00b7 Evidence \u00b7 Conflicting evidence",
+  "title": "DrugRep \u00b7 Evidence \u00b7 Conflicting evidence",
   "render_s": 0.25,
   "screenshot": "after_desktop_conflicts.png"
  },
@@ -125,7 +125,7 @@
   "headings": 2,
   "charts": 1,
   "overflow": -15,
-  "title": "EviRep \u00b7 Evidence \u00b7 Trial-role review",
+  "title": "DrugRep \u00b7 Evidence \u00b7 Trial-role review",
   "render_s": 0.25,
   "screenshot": "after_desktop_review.png"
  },
@@ -138,7 +138,7 @@
   "headings": 3,
   "charts": 2,
   "overflow": -15,
-  "title": "EviRep \u00b7 Run Center \u00b7 Stages and runs",
+  "title": "DrugRep \u00b7 Run Center \u00b7 Stages and runs",
   "render_s": 0.26,
   "screenshot": "after_desktop_live.png"
  },
@@ -151,7 +151,7 @@
   "headings": 2,
   "charts": 0,
   "overflow": -15,
-  "title": "EviRep \u00b7 Run Center \u00b7 Advanced diagnostics",
+  "title": "DrugRep \u00b7 Run Center \u00b7 Advanced diagnostics",
   "render_s": 0.52,
   "screenshot": "after_desktop_technical.png"
  },
@@ -164,7 +164,7 @@
   "headings": 4,
   "charts": 0,
   "overflow": -15,
-  "title": "EviRep \u00b7 Run Center \u00b7 Pipeline health",
+  "title": "DrugRep \u00b7 Run Center \u00b7 Pipeline health",
   "render_s": 0.26,
   "screenshot": "after_desktop_agent_10b.png"
  }

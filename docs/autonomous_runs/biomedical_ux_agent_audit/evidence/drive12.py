@@ -48,7 +48,7 @@ cmd("Page.navigate", url=URL + "#agent/10e"); pump(5)
 before = set(launch_ids())
 grab = "(async () => { const s = await (await fetch('/api/session')).json(); window.__n = s.session_nonce; return true })()"
 js(grab); js2(grab)
-fire = "fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json','X-EviRep-Nonce':window.__n},body:JSON.stringify({stage:'10e'})}).then(r=>r.status)"
+fire = "fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json','X-DrugRep-Nonce':window.__n},body:JSON.stringify({stage:'10e'})}).then(r=>r.status)"
 js(f"window.__p = {fire}"); js2(f"window.__p = {fire}")
 codes = sorted([js("window.__p"), js2("window.__p")])
 idle()

@@ -79,7 +79,7 @@ md5 values are cached by size and modification time, so a poll costs a few `stat
 = `run_stage.py --sequence ...` in dependency order, fresh stages skipped, dependants of a failure BLOCKED).
 - Policy (server-enforced, `ui/live_runs.py`): stages that rewrite protected/approved artefacts are refused; 04p, 05h
   and diag need a second confirming click (they may contact external services); offline agent stages are allowed.
-- Requests: `POST /api/run` only, same-origin `Origin`, per-server nonce from `/api/session` in `X-EviRep-Nonce`,
+- Requests: `POST /api/run` only, same-origin `Origin`, per-server nonce from `/api/session` in `X-DrugRep-Nonce`,
   JSON body <= 1 KB. Every other POST is 405; no GET route starts anything.
 - Launches are detached (they survive a server restart) and recorded in `data/_runs/_ui_launches/`; the run manifest
   stays authoritative. No cancellation (stopping the runner mid-stage would skip its restore-on-failure step).

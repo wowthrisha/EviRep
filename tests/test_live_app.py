@@ -10,7 +10,7 @@ import tempfile
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_spec = importlib.util.spec_from_file_location("evirep_ui_app", os.path.join(ROOT, "ui", "server.py"))
+_spec = importlib.util.spec_from_file_location("drugrep_ui_app", os.path.join(ROOT, "ui", "server.py"))
 ui = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(ui)
 
@@ -56,7 +56,7 @@ class TestLiveSnapshot(unittest.TestCase):
 
 class TestLiveSnapshotEdgeStates(unittest.TestCase):
     def setUp(self):
-        self.root = tempfile.mkdtemp(prefix="evirep_liveapp_")
+        self.root = tempfile.mkdtemp(prefix="drugrep_liveapp_")
         os.makedirs(os.path.join(self.root, "data"))
 
     def tearDown(self):

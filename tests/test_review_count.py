@@ -6,7 +6,7 @@ import tempfile
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_spec = importlib.util.spec_from_file_location("evirep_ui_review_count", os.path.join(ROOT, "ui", "server.py"))
+_spec = importlib.util.spec_from_file_location("drugrep_ui_review_count", os.path.join(ROOT, "ui", "server.py"))
 ui = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(ui)
 HEADER = "priority,flag,nct_id,compound,status,reviewer,decision\n"
@@ -14,7 +14,7 @@ HEADER = "priority,flag,nct_id,compound,status,reviewer,decision\n"
 
 class TestReviewCountIsComputed(unittest.TestCase):
     def setUp(self):
-        self.tmp = tempfile.mkdtemp(prefix="evirep_review_count_")
+        self.tmp = tempfile.mkdtemp(prefix="drugrep_review_count_")
         os.makedirs(os.path.join(self.tmp, "data"))
 
     def tearDown(self):

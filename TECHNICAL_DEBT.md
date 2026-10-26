@@ -1,6 +1,6 @@
 # TECHNICAL DEBT
 
-Known issues in the EviRep repository that are **recorded, not fixed**.
+Known issues in the DrugRep repository that are **recorded, not fixed**.
 
 Most of these predate the Molecular / Pathway Agent work (2026-10-05). They were
 identified during a read-only audit and were deliberately left alone, because that session

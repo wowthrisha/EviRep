@@ -17,7 +17,7 @@ import time
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_spec = importlib.util.spec_from_file_location("evirep_ui_live", os.path.join(ROOT, "ui", "server.py"))
+_spec = importlib.util.spec_from_file_location("drugrep_ui_live", os.path.join(ROOT, "ui", "server.py"))
 ui = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(ui)
 lr = ui.live_runs
@@ -48,7 +48,7 @@ class Live:
         if origin:
             h["Origin"] = f"http://127.0.0.1:{self.port}"
         if nonce:
-            h["X-EviRep-Nonce"] = self.nonce() if nonce is True else nonce
+            h["X-DrugRep-Nonce"] = self.nonce() if nonce is True else nonce
         return self.req("POST", "/api/run", raw if raw is not None else json.dumps(body).encode(), h)
 
     def close(self):
@@ -58,7 +58,7 @@ class Live:
 
 class Base(unittest.TestCase):
     def setUp(self):
-        self.root = tempfile.mkdtemp(prefix="evirep_live_")
+        self.root = tempfile.mkdtemp(prefix="drugrep_live_")
         os.makedirs(os.path.join(self.root, "data"))
         self.live = Live(self.root)
         lr._PROCS.clear()
@@ -109,7 +109,7 @@ class TestRequestGuards(Base):
         for kw, code in cases:
             status, body = self.live.post({"stage": "10h"}, **kw)
             self.assertEqual(status, code, (kw, body))
-        h = {"Content-Type": "application/json", "Origin": "http://evil.example", "X-EviRep-Nonce": self.live.nonce()}
+        h = {"Content-Type": "application/json", "Origin": "http://evil.example", "X-DrugRep-Nonce": self.live.nonce()}
         self.assertEqual(self.live.req("POST", "/api/run", b'{"stage":"10h"}', h)[0], 403)
         self.assertEqual(self.launch_records(), [])                       # nothing was launched
 
@@ -158,7 +158,7 @@ class TestPathConfinement(Base):
 
     def setUp(self):
         super().setUp()
-        self.outside = tempfile.mkdtemp(prefix="evirep_outside_")
+        self.outside = tempfile.mkdtemp(prefix="drugrep_outside_")
         with open(os.path.join(self.outside, "log.txt"), "w") as fh:
             fh.write("SECRET-OUTSIDE-LINE\n")
 

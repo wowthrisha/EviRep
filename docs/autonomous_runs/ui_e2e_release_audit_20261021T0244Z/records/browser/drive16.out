@@ -1,10 +1,10 @@
 PASS primary navigation has exactly five sections in order :: {"nav": [["overview", "Overview"], ["drugs", "Candidates"], ["evidence", "Evidence"], ["validation", "Validation"], ["run", "Run Center"]]}
-PASS root URL opens the researcher Overview :: {"title": "EviRep \u00b7 Overview", "load_s": 0.62}
-PASS nav 'Overview' opens its section and marks it current :: {"hash": "#overview", "title": "EviRep \u00b7 Overview"}
-PASS nav 'Candidates' opens its section and marks it current :: {"hash": "#drugs", "title": "EviRep \u00b7 Candidates \u00b7 Candidate table"}
-PASS nav 'Evidence' opens its section and marks it current :: {"hash": "#evidence", "title": "EviRep \u00b7 Evidence \u00b7 All evidence"}
-PASS nav 'Validation' opens its section and marks it current :: {"hash": "#validation", "title": "EviRep \u00b7 Validation"}
-PASS nav 'Run Center' opens its section and marks it current :: {"hash": "#run", "title": "EviRep \u00b7 Run Center \u00b7 Pipeline health"}
+PASS root URL opens the researcher Overview :: {"title": "DrugRep \u00b7 Overview", "load_s": 0.62}
+PASS nav 'Overview' opens its section and marks it current :: {"hash": "#overview", "title": "DrugRep \u00b7 Overview"}
+PASS nav 'Candidates' opens its section and marks it current :: {"hash": "#drugs", "title": "DrugRep \u00b7 Candidates \u00b7 Candidate table"}
+PASS nav 'Evidence' opens its section and marks it current :: {"hash": "#evidence", "title": "DrugRep \u00b7 Evidence \u00b7 All evidence"}
+PASS nav 'Validation' opens its section and marks it current :: {"hash": "#validation", "title": "DrugRep \u00b7 Validation"}
+PASS nav 'Run Center' opens its section and marks it current :: {"hash": "#run", "title": "DrugRep \u00b7 Run Center \u00b7 Pipeline health"}
 PASS Evidence sub-pages (evidence, mechanism, conflicts, review) open inside the Evidence section :: {"tabs": ["#evidence", "#mechanism", "#conflicts", "#review"]}
 PASS every older address still opens, inside its new section :: {"dashboard": true, "live": true, "technical": true, "pipeline": true, "agents": true, "cases": true, "agent/10b": true, "compare": true, "mechanism": true, "overview": true}
 PASS deep link, back and refresh keep the candidate page :: {"deep": true, "back": true}

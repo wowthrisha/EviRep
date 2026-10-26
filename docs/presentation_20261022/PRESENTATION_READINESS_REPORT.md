@@ -1,4 +1,4 @@
-# EviRep: presentation readiness report (2026-10-22, 02:17–02:36 UTC)
+# DrugRep: presentation readiness report (2026-10-22, 02:17–02:36 UTC)
 
 ## 1. Verdict
 **GO for today's local presentation.**

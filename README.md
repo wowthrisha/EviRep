@@ -1,4 +1,4 @@
-# EviRep
+# DrugRep
 
 Evidence-based drug repurposing for **Parkinson's disease**. Candidate compounds are
 scored on independent evidence dimensions, fused into a Validated Priority Score

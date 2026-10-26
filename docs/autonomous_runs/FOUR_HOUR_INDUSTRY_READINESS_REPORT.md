@@ -1,4 +1,4 @@
-# EviRep 4-hour hardening sprint: industry-readiness report (2026-10-20)
+# DrugRep 4-hour hardening sprint: industry-readiness report (2026-10-20)
 
 ## 1. Executive summary
 **Verdict: DEVELOPMENT READY**, unchanged. The engineering base is stronger, but authentication, HTTPS, monitoring, scheduled backups and a vulnerability scan are still missing, and the scientific owner decisions are still open.

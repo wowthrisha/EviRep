@@ -14,4 +14,4 @@ pipeline {'link': 4, 'button': 5} unnamed: [] charts: 0 bad charts: 0
 agents {'link': 4, 'button': 5, 'combobox': 1} unnamed: [] charts: 0 bad charts: 0
 cases {'link': 30, 'button': 5} unnamed: [] charts: 0 bad charts: 0
 agent/10b {'link': 5, 'button': 6} unnamed: [] charts: 0 bad charts: 0
-SUMMARY unnamed 0 charts 23 bad_charts 0 doc {'lang': 'en', 'main': True, 'skip': True, 'title': 'EviRep · Run Center · Pipeline health'}
+SUMMARY unnamed 0 charts 23 bad_charts 0 doc {'lang': 'en', 'main': True, 'skip': True, 'title': 'DrugRep · Run Center · Pipeline health'}

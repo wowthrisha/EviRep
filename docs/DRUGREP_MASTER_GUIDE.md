@@ -1,4 +1,4 @@
-# EviRep master guide: from source code to final output
+# DrugRep master guide: from source code to final output
 
 *Written 2026-10-21 from the code and data in this repository. Line numbers refer to the current working tree. When the docs and the code disagree, this guide says what the **code** does.*
 
@@ -8,7 +8,7 @@
 
 | Question | Answer |
 |---|---|
-| **What does EviRep ask?** | Among existing drugs that were already tested in Parkinson's disease (PD) before 2021, which ones look most worth further investigation, judged only on evidence available before 2021? |
+| **What does DrugRep ask?** | Among existing drugs that were already tested in Parkinson's disease (PD) before 2021, which ones look most worth further investigation, judged only on evidence available before 2021? |
 | **Inputs** | Hetionet knowledge graph, ClinicalTrials.gov, PubMed + Semantic Scholar, openFDA labels, Open Targets / ChEMBL / Reactome. |
 | **What comes out?** | `data/vps_scores_v2.csv`: 90 compounds, each with 5 percentile ranks and a score `VPS_equal_5d`. `data/vps_evaluation_report.json` holds the metrics. |
 | **What is VPS?** | "Validated Priority Score". Here it is simply the **mean of five percentile ranks**, one per evidence dimension (`06_vps_fusion.py:598-599`). |
@@ -40,7 +40,7 @@
 
 ## A. The project in one page
 
-**The problem.** Whether a repurposed drug truly helps patients is rarely known, so EviRep uses a **checkable proxy**. It freezes the evidence on 1 January 2021, scores each candidate with only that evidence, and asks whether the higher-ranked drugs were more often the ones that later got *new* PD trials.
+**The problem.** Whether a repurposed drug truly helps patients is rarely known, so DrugRep uses a **checkable proxy**. It freezes the evidence on 1 January 2021, scores each candidate with only that evidence, and asks whether the higher-ranked drugs were more often the ones that later got *new* PD trials.
 
 **VPS in this code.** Each of five raw measurements becomes a percentile rank between 0 and 1 within the 90-compound pool, where higher means more favourable. The five ranks are averaged with weights of 0.2.
 

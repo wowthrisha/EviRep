@@ -28,7 +28,7 @@ def script(root, name, body):
 
 class Base(unittest.TestCase):
     def setUp(self):
-        self.root = tempfile.mkdtemp(prefix="evirep_runs_")
+        self.root = tempfile.mkdtemp(prefix="drugrep_runs_")
         os.makedirs(os.path.join(self.root, "data"))
         self.w("data/src.csv", "x\n1\n")
         a = script(self.root, "a.py", """
@@ -533,7 +533,7 @@ class TestAttest(Base):
         super().setUp()
         self.w("data/a.csv", "y\n2\n")
         rs.adopt(self.root, self.stages)                          # live: adopted, no code fingerprint
-        self.copy = tempfile.mkdtemp(prefix="evirep_attest_copy_")
+        self.copy = tempfile.mkdtemp(prefix="drugrep_attest_copy_")
         shutil.copytree(os.path.join(self.root, "data"), os.path.join(self.copy, "data"), dirs_exist_ok=True)
         os.remove(os.path.join(self.copy, "data", "run_manifest.json"))
 
@@ -756,7 +756,7 @@ class TestRealRegistry(unittest.TestCase):
         stages = rs.load_stages()
         readers = {s["id"] for s in stages if "data/vps_scores_v2.csv" in s["inputs"]}
         manifest = {"stages": {}}
-        root = tempfile.mkdtemp(prefix="evirep_dep_")
+        root = tempfile.mkdtemp(prefix="drugrep_dep_")
         try:
             os.makedirs(os.path.join(root, "data"))
             for s in stages:                                   # every stage recorded as a success on empty files

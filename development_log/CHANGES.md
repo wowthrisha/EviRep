@@ -1,6 +1,6 @@
 # CHANGES
 
-Chronological record of modifications **actually made** to the EviRep repository.
+Chronological record of modifications **actually made** to the DrugRep repository.
 Only completed, verified changes are recorded here. Planned work lives in the task plan,
 not in this file.
 

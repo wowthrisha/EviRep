@@ -4,8 +4,8 @@ import os, json, time, base64
 HERE = os.path.dirname(os.path.abspath(__file__))
 exec(open(os.path.join(HERE, "drive.py")).read().split("results = []")[0])
 URL = "http://127.0.0.1:8799/"
-COPY = os.environ["EVIREP_COPY"]
-SHOTS = os.environ.get("EVIREP_SHOTS")
+COPY = os.environ["DRUGREP_COPY"]
+SHOTS = os.environ.get("DRUGREP_SHOTS")
 res = []
 def rec(n, ok, d=None):
     res.append({"step": n, "ok": bool(ok), "detail": d or {}}); print(("PASS " if ok else "FAIL ") + n + " :: " + json.dumps(d or {})[:240], flush=True)

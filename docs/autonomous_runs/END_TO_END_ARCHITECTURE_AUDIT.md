@@ -1,4 +1,4 @@
-# EviRep end-to-end architecture audit (2026-10-20)
+# DrugRep end-to-end architecture audit (2026-10-20)
 
 **Sources and method.** This map is generated from the live stage registry (`ui/server.py` `STAGES`), the single source the runner (`scripts/run_stage.py`) and the dashboard both use. It was checked against the scripts by `tests/test_ui.py::TestRegistryMatchesCode` and `tests/test_run_tracking.py::TestRealRegistry`.
 

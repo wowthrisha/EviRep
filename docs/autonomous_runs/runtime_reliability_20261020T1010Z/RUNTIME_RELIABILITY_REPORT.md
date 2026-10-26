@@ -1,4 +1,4 @@
-# EviRep runtime reliability and regression verification (2026-10-20, 10:10Z–10:32Z)
+# DrugRep runtime reliability and regression verification (2026-10-20, 10:10Z–10:32Z)
 
 **Scope.** This covers the local app on loopback: Python stdlib server, vanilla-JS Dashboard and `scripts/run_stage.py`. Each check is classified as follows.
 

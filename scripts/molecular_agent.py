@@ -1,5 +1,5 @@
 """
-Molecular / Pathway Evidence Agent  (EviRep evidence dimension 5)
+Molecular / Pathway Evidence Agent  (DrugRep evidence dimension 5)
 
 Builds a traceable molecular evidence chain:
 
@@ -26,7 +26,7 @@ DESIGN RULES (enforced, not aspirational)
    by this project:
        - `clinical`   (datasource `clinical_precedence`) encodes that a drug
                       hitting this target is already in clinical trials for the
-                      disease. That is effectively the EviRep ground-truth
+                      disease. That is effectively the DrugRep ground-truth
                       label (post-cutoff PD trials) and also duplicates the
                       existing clinical-maturity dimension.
        - `literature` (datasource `europepmc`) is drug/gene-disease co-mention
@@ -133,7 +133,7 @@ class MolecularAgentConfig:
     """
     All tunables in one place. Every weight is documented and configurable.
 
-    WEIGHT RATIONALE (chosen a priori; NOT fitted or tuned against the EviRep
+    WEIGHT RATIONALE (chosen a priori; NOT fitted or tuned against the DrugRep
     ground-truth labels -- doing so would be label leakage):
 
       `weight_direct` (0.6) > `weight_pathway` (0.4)
@@ -1152,7 +1152,7 @@ def validate_output(record: Dict[str, Any]) -> None:
 #: Applies to every record. Documented here once rather than restated per drug.
 BASELINE_LIMITATIONS = [
     "Open Targets data version is a CURRENT snapshot (26.09). It therefore "
-    "includes evidence published after the EviRep 2021-01-01 cutoff. Unlike the "
+    "includes evidence published after the DrugRep 2021-01-01 cutoff. Unlike the "
     "clinical dimension (script 03), this dimension is NOT cutoff-bounded. "
     "Residual temporal optimism is possible even though the two label-encoding "
     "datatypes are excluded. See development_log/ERRORS_AND_BLOCKERS.md B-001.",

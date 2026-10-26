@@ -99,7 +99,7 @@ class TestStep05Main(unittest.TestCase):
     """API failure -> no checkpoint row (missing); no label -> blank values."""
 
     def setUp(self):
-        self.tmp = tempfile.mkdtemp(prefix="evirep_safety_")
+        self.tmp = tempfile.mkdtemp(prefix="drugrep_safety_")
         os.makedirs(os.path.join(self.tmp, "data"))
         pd.DataFrame({"compound_name": ["Alpha", "Beta", "Gamma"]}).to_csv(
             os.path.join(self.tmp, "data", "clinical_maturity_precutoff_clean.csv"), index=False)

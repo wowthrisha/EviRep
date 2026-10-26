@@ -1,4 +1,4 @@
-# EviRep final live-runtime gate (2026-10-20, 10:36Z–11:08Z)
+# DrugRep final live-runtime gate (2026-10-20, 10:36Z–11:08Z)
 
 ## Decision
 **PASS for local, single-user research use on loopback.**

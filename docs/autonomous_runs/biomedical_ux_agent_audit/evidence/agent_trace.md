@@ -1,4 +1,4 @@
-# EviRep evidence agents 10a–10h: contract trace
+# DrugRep evidence agents 10a–10h: contract trace
 
 Audit date 2026-10-20. Repository `/Users/thrisha/Drup_Rep_PF/EviRep`. The audit was read-only. No pipeline stage or network call was run. The only commands run were offline `unittest` modules and read-only reads.
 All `file:line` references are relative to the repository root.

@@ -1,4 +1,4 @@
-# EviRep overnight mission — final report (2026-10-20)
+# DrugRep overnight mission — final report (2026-10-20)
 
 **Time.** The session started at 2026-10-19T18:45:42Z and ended at about 07:00Z on 2026-10-20. For most of that window the session was paused on a usage limit, not working. Actual working time was roughly **45 minutes**, nowhere near the six hours the brief allowed. Everything below was produced in that time and was verified.
 
