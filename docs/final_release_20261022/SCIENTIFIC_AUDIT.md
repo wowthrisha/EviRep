@@ -69,7 +69,7 @@ Every number below was recomputed in this audit from saved files, or read from a
 | Same cohort and labels across models | yes: variants, baselines and ablations are computed from one data frame in stage 06; experiments assert n = 90 and 14 positives |
 | Grid-searched weights | the `VPS_grid_*` columns are **in-sample** (weights chosen on all data). Honest held-out values: 5D 0.639, 4D 0.607, 3D 0.584 (nested CV, `06:423-480`). Figure 1 hatches them as in-sample. |
 | Bootstrap | percentile, not stratified, single-class resamples skipped (0 skipped) |
-| Validation type | **internal, retrospective, temporal split only. No external validation dataset exists.** Nothing in the UI or docs claims external validation. The name "Validated Plausibility Score" (README:4) should not be read as external validation (**R-1**). |
+| Validation type | **internal, retrospective, temporal split only. No external validation dataset exists.** Nothing in the UI or docs claims external validation. The name "Validated Priority Score" (README:4) should not be read as external validation (**R-1**). |
 | Small sample | 14 positives; AUROC CI width ≈ 0.22; 5D-vs-4D difference not significant (+0.075 [−0.025, 0.176]) |
 
 ## D. Dimension-level findings

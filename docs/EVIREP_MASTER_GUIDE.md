@@ -11,7 +11,7 @@
 | **What does EviRep ask?** | Among existing drugs that were already tested in Parkinson's disease (PD) before 2021, which ones look most worth further investigation, judged only on evidence available before 2021? |
 | **Inputs** | Hetionet knowledge graph, ClinicalTrials.gov, PubMed + Semantic Scholar, openFDA labels, Open Targets / ChEMBL / Reactome. |
 | **What comes out?** | `data/vps_scores_v2.csv`: 90 compounds, each with 5 percentile ranks and a score `VPS_equal_5d`. `data/vps_evaluation_report.json` holds the metrics. |
-| **What is VPS?** | "Validated Plausibility Score". Here it is simply the **mean of five percentile ranks**, one per evidence dimension (`06_vps_fusion.py:598-599`). |
+| **What is VPS?** | "Validated Priority Score". Here it is simply the **mean of five percentile ranks**, one per evidence dimension (`06_vps_fusion.py:598-599`). |
 | **Approved result** | Run `adopted-20261015T015501Z-06`: AUROC **0.775** [0.656, 0.881], AUPRC **0.424** (chance 0.156), 90 compounds = 14 positives + 76 negatives. |
 | **What the label means** | 1 = a qualifying PD interventional trial naming the drug was **first posted on or after 2021-01-01**. It measures *continued trial activity*, **not efficacy** (D-010, `DECISIONS.md:210-234`). |
 | **Can / cannot conclude** | It orders compounds better than chance against later PD trial activity. It **cannot** show that any drug works, and the score is not a probability. |

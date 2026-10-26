@@ -1,7 +1,7 @@
 # EviRep
 
 Evidence-based drug repurposing for **Parkinson's disease**. Candidate compounds are
-scored on independent evidence dimensions, fused into a Validated Plausibility Score
+scored on independent evidence dimensions, fused into a Validated Priority Score
 (VPS), and evaluated against post-cutoff ClinicalTrials.gov entries as ground truth.
 
 > Cutoff discipline: `CUTOFF_DATE = 2021-01-01`. Pre-cutoff trials are a **feature**;

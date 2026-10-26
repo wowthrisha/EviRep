@@ -3,7 +3,7 @@
 Detailed row-level evidence from the previous pass (2026-10-20) is in `../scientific_release_audit/`. This file records what was re-verified and what is new in this session.
 
 ## What "VPS" means here
-- **VPS = "Validated Plausibility Score"** (`README.md:4`). The mission brief's "Vulnerability/Priority Score" does not occur anywhere in the repository.
+- **VPS = "Validated Priority Score"** (`README.md:4`; renamed on 2026-10-26, the README said "Validated Plausibility Score" at the time of this audit). The mission brief's "Vulnerability/Priority Score" does not occur anywhere in the repository.
 - It is a research-priority ranking of drugs already tested in Parkinson's disease. It is **not a probability and not efficacy**.
 
 ## Canonical formula, verified against the protocol and the code

@@ -22,4 +22,4 @@
 | 16 | Evidence links open the intended record | brief §8.4 | `extLink` patterns | evidence index | 15 live identifier checks | 15/15 resolve and contain the identifier | verified (sample) | — |
 | 17 | 28 trial links await review; none auto-resolved | D-020 | review worklist | `clinical_review_worklist.csv` | count and key join | 28 unresolved, all feature links | verified | blocker 6 |
 | 18 | Times displayed consistently | brief §10 | `ui/app.js` | — | inspection | header used local time | fixed (UTC) | — |
-| 19 | "VPS" means "Vulnerability/Priority Score" (brief) | `README.md:4` says "Validated Plausibility Score" | — | — | text search | the brief's expansion is not in the repository | ambiguous → repository wording kept | — |
+| 19 | "VPS" means "Vulnerability/Priority Score" (brief) | `README.md:4` said "Validated Plausibility Score" at the time; renamed to "Validated Priority Score" on 2026-10-26 | — | — | text search | the brief's expansion is not in the repository | ambiguous → repository wording kept | — |
